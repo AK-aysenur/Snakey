@@ -2,21 +2,46 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: monospace, Arial, Helvetica, sans-serif;
 }
 
-:root {
+/* :root {
     color-scheme: light dark;
 
     --background-dark: light-dark(lightgray, #302e2e);
+} */
+
+.random {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+h1 {
+    font-size: 1.2rem;
+    font-weight: 530;
+    color: white;
+}
+
+img:nth-of-type(1) {
+    height: 15vh;
+    
+}
+
+img:nth-of-type(2) {
+    height: 15vh;
+    
 }
 
 body {
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
     min-height: 100vh;
-    background: var(--background-dark);
+    background: #302e2e;
+    display: grid;
+    /* align-content: center; */
+    justify-content: center;
 }
 
 /* vmin = viewport minimum */
@@ -26,16 +51,21 @@ body {
     display: flex;
     overflow: hidden;
     flex-direction: column;
-    background: lightcoral;
+    background: rgb(251, 121, 121);
     border-radius: 10px;
 }
 
 .game-details {
     font-weight: 800;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     padding: 20px 27px;
     display: flex;
     justify-content: space-between;
+    color: #9c0000;
+}
+
+.score {
+    font-weight: 500;
 }
 
 .play-board {
@@ -43,7 +73,7 @@ body {
     height: 100%;
     display: grid;
     grid-template: repeat(30, 1fr) / repeat(30, 1fr); /* dit verzorgd voor kleine vierkante grids */
-    background: #da5656;
+    background: #cf4e4e;
 }
 
 .play-board .food {
@@ -51,7 +81,7 @@ body {
 }
 
 .play-board .head {
-    background: #610069;
+    background: #9c0000;
 }
 
 .controls {
@@ -66,7 +96,7 @@ body {
     cursor: pointer;
     font-size: 1.3rem;
     border-right: 1px solid #da5656;
-    color: #c50000;
+    color: #9c0000;
 }
 
 /* .button {
@@ -75,6 +105,20 @@ body {
 } */
 
 @media screen and (max-width: 800px) {
+    body {
+        display: grid;
+        justify-items: center;
+    }
+    h1 {
+        text-align: center;
+        font-size: .9rem;
+    }
+    img:nth-of-type(1) {
+        padding-left: 1rem;
+    }
+    img:nth-of-type(2) {
+        padding-right: 1rem;
+    }
     .wrapper {
         width: 90vmin;
         height: 115vmin;
